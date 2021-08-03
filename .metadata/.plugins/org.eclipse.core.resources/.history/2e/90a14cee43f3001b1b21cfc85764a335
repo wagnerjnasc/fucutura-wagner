@@ -1,0 +1,7 @@
+package school;
+
+public class Aluno extends Pessoa {
+	private String matricula;
+	private Disciplina disciplina = new Disciplina();
+	
+}

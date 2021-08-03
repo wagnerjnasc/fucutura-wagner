@@ -1,0 +1,33 @@
+package bank;
+
+import java.util.Scanner;
+
+import bank.Conta;
+
+public class OperacaoBancaria extends Conta {
+
+	Scanner leia = new Scanner(System.in);
+	private double saldo;
+	
+	public void sacar() {
+		System.out.println("Valor do saque: ");
+		valor = leia.nextDouble();
+		System.out.println("Realizando Saque... " + valor);
+		return;
+	}
+	public void depositar() {
+		double valor;
+		System.out.println("Valor do depósito: ");
+		valor = leia.nextDouble();
+		System.out.println("Realizando Depósito... " + valor);
+		return;
+	}
+	public void transferir(Conta c, double valor) {
+		System.out.println("Valor da Transferência: ");
+		valor = leia.nextDouble();
+		System.out.println("Transferindo valor... " + valor);
+		System.out.println("Saldo: " + getSaldo());
+		sacar();
+		c.depositar();
+	}
+}

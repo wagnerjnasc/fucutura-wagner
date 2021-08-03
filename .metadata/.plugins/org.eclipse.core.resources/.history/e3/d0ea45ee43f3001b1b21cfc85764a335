@@ -1,0 +1,9 @@
+package school;
+
+public class Disciplina {
+
+	private String tipo;
+	private double n1;
+	private double n2;
+	private Professor professor = new Professor();
+}

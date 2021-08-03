@@ -1,0 +1,35 @@
+package teste;
+
+import entidade.Conta;
+import entidade.Endereco;
+import entidade.Pessoa;
+
+public class BancoTeste {
+	public static void main(String[] args) {
+		
+		Pessoa p = new Pessoa();
+		p.setNome(" Wagner");
+		p.setCpf(" 08317476413");
+		p.setIdade( 30);
+		
+		Conta c = new Conta();
+		c.setDono(p.getNome());
+		c.setNumero(78989);
+		c.setLimite(1000.00);
+		c.setSaldo(5000.00);
+		
+		p.setConta(c);
+		
+		Endereco end = new Endereco();
+		end.setBairo("Areias");
+		end.setCidade("Recife");
+		end.setEstado("PE");
+		end.setNumero(172);
+		end.setRua("Rua Guaraci");
+		
+		p.setEndereco(end);
+		
+		System.out.println(p);
+	
+	}
+}
